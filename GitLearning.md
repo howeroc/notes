@@ -14,6 +14,25 @@ fatal: I don't handle protocol 'https'
 $ git remote set-url origin https://github.com/USERNAME/YOURREPOSITORY.git
 ```
 
+- 当push时不能使用SSH Key进行验证，提示输入密码时可以修改工作目录下.git/config文件将url后https开头的连接换成git开头的
+
+```bash
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "origin"]
+	url = git@github.com:howeroc/notes.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+```
+
 - 测试SSH key是否配置成功
 
 ```bash
