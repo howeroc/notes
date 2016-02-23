@@ -1,5 +1,18 @@
-# Git学习笔记
----
+## Git学习笔记
+
+### 常见问题
+
+- windows下push时提示
+
+```bash
+$ git push --set-upstream origin master
+
+fatal: I don't handle protocol 'https'
+```
+- 可用以下命令解决：
+```bash
+$ git remote set-url origin https://github.com/USERNAME/YOURREPOSITORY.git
+```
 
 **名词介绍**
 > - 本文以wd代替Working Directory（工作目录）
