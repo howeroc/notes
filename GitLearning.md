@@ -14,6 +14,12 @@ fatal: I don't handle protocol 'https'
 $ git remote set-url origin https://github.com/USERNAME/YOURREPOSITORY.git
 ```
 
+- 测试SSH key是否配置成功
+
+```bash
+$ ssh -T git@github.com
+```
+
 **名词介绍**
 > - 本文以wd代替Working Directory（工作目录）
 > - 以repo代替Repository（仓库，即.git文件夹）
